@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-ray</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Visit 1 (Screening)</h3>
+        <button style="color: #fff;background-color: blue;">View Source Documents</button>
+    </header>
+    <main>
+        <div  style="background-color: #f0f0f0; border-radius: 10px; padding: 20px;">
+            <h2>CHEST X-Ray</h2>
+            <div style="display:flex;justify-content:  space-between;">
+            <button>Back</button>
+            <div>
+            <button>Upload Documents -></button>
+            <input type="file" name="Upload file" id="">
+        </div>
+            </div>
+        </div>
+        <form class="content">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h4>Is Chest X-Ray done?</h4>
+                    <input type="radio" name="chestXRayDone" id="chestXRayDoneYes"><label for="chestXRayDoneYes">Yes</label>
+                    <input type="radio" name="chestXRayDone" id="chestXRayDoneNo"><label for="chestXRayDoneNo">No</label>
+                    <input type="radio" name="chestXRayDone" id="chestXRayDoneNA"><label for="chestXRayDoneNA">Not Applicable</label>
+                </div>
+            </div>
+            <br>
+            <div class="hidden" id="reasonBlock">
+            <div>
+                <h4>If No, Specify The reason(s)</h4>
+                <input type="text" name="reason" id="reason">
+            </div>
+            </div>
+            <div class="hidden" id="chestXRayDoneBlock">
+                <div>
+                <h4>Date of Assessment</h4>
+                
+                <h4>Result</h4>
+                <h4>Comment (If Result is Abnormal)</h4>
+            </div>
+            <div>
+                <input type="date" name="dateOfAssessment" id="dateOfAssessment">
+                <br>
+                <input type="radio" name="result" id="resultNormal"><label for="resultNormal">Normal</label>
+                <input type="radio" name="result" id="resultAbnormalNCS"><label for="resultAbnormalNCS">Abnormal NCS</label>
+                <input type="radio" name="result" id="resultAbnormalCS"><label for="resultAbnormalCS">Abnormal CS</label>
+                <br>
+                <input type="text" name="comment" id="comment">
+            </div>
+            </div>
+        </form>
+        <center><button id="saveAndSubmitBtn">Save and Submit</button></center>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
